@@ -31,10 +31,9 @@ The Vagrantfile in this repo will build the below network using Cumulus VX VMs r
 3. Create a directory for running the Vagrant-Cumulus lab:
    ex: U:\Cumulus\Vagrant>
 4. Copy the "Vagrantfile" contents from this repo to the new directory.
-   Using git: "git clone https://github.qualcomm.com/mattt/vagrant-cumulus"
+   Using git: "git clone https://github.com/mattincarlsbad/vagrant-cumulus"
    Or just copy/paste
 5. Download the Cumulus VX image to the same directory (optional, for quicker load times)
-   http://mattt-test/cumulus/cumulus-linux-3.3.1-vx-amd64-1495771745.c1063bczfc5ca01.box
 
 ## Vagrantup!
 1. Start the lab by using the "vagrant up" command in the Vagrant-Cumulus directory:
