@@ -11,6 +11,7 @@ Vagrant.configure(2) do |config|
   
   config.vm.define "leaf2" do |leaf2|
     leaf2.vm.box = "CumulusCommunity/cumulus-vx"
+    config.vm.base_mac = "080027beef02"
     # Internal network for swp* interfaces.
     leaf2.vm.network "private_network", virtualbox__intnet: "sp1swp2-lf2swp1", auto_config: false
     leaf2.vm.network "private_network", virtualbox__intnet: "sp2swp2-lf2swp2", auto_config: false
