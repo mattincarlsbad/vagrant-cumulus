@@ -6,20 +6,25 @@ https://www.vagrantup.com/docs/getting-started/
 ## Network
 The Vagrantfile in this repo will build the below network using Cumulus VX VMs running in Virtualbox.  Try it, it's so easy!
 ```bash
-+----------+      +----------+
+
+  mgmt-net          mgmt-net
+     |                 |
++----1-----+      +----1-----+
 |  spine1  |      |  spine2  |
 |          |      |          |
-+--1------2+      +1------2--+
-   |      |        |      |
-   |      |        |      |
-   |      +-----------+   |
-   |               |  |   |
-   |   +-----------+  |   |
++--2------3+      +2------3--+    mgmt-net
+   |      |        |      |          |
+   |      |        |      |     +----1-----+
+   |      +-----------+   |     | ansible  |
+   |               |  |   |     |          |
+   |   +-----------+  |   |     +----------+
    |   |              |   |
-+--1---2---+      +---1---2--+
-|          3------3          |
-|  leaf1   4------4   leaf2  |
-+----------+      +----------+
++--2---3---+      +---2---3--+   
+|          4------4          |
+|  leaf1   5------5   leaf2  |
++----1-----+      +-----1----+
+     |                  |   
+  mgmt-net           mgmt-net
 ```
 
 ## Installation
